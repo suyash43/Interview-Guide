@@ -1,10 +1,17 @@
-Question 1. 
-Interviewer: How would you securely enable communication between three Kubernetes clusters without using external DNS?
+Question 1 : How would you securely enable communication between three Kubernetes clusters without using external DNS?
 Answer: 
 To securely enable communication between three Kubernetes clusters without relying on external DNS, I would implement a service mesh such as Istio. Service mesh provide robust features for managing secure communication between services across clusters, including encryption and authentication. Additionally, I would configure network policies within each cluster to control traffic, ensuring that only authorized pods can communicate. While NodePort and ClusterIP are also options for communication within Kubernetes clusters, they may not provide the same level of security and flexibility as a service mesh like Istio
 
-Question 2. 
-Interviewer:
-Can you elaborate on how you would manage the certificates and authentication between the clusters?
+Question 2 : Can you elaborate on how you would manage the certificates and authentication between the clusters?
 Answer:
 For managing certificates and authentication, I would use a centralized certificate authority (CA) to issue and manage the certificates, utilizing tools like cert-manager to automate this process. This ensures all clusters trust the same CA. For authentication and authorization, I would implement Role-Based Access Control (RBAC) policies to define permissions for different services and users.
+
+Question 3 : Can you describe a scenario where AWS Systems Manager was crucial for managing security patches on instances in a restricted environment?
+Answer:
+In my previous project, our instances were within a highly secure environment with strict access controls. These instances were in private subnets with no direct internet access. Using SSM, I scheduled and automated security patch deployments via the Patch Manager.
+
+Question 4 : What other specific tasks did you perform on these private instances using SSM?
+Answer:
+I used SSM to run scripts for software updates and to collect system logs for troubleshooting. This was done through the Run Command feature in SSM, which allowed me to execute commands on multiple instances simultaneously without needing direct SSH access. Also in my current project I have implemented enhanced monitoring for disk space , Detailed Transaction tracing and in depth log analysis.
+
+Question 4 :
