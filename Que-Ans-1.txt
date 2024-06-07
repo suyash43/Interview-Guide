@@ -14,4 +14,10 @@ Question 4 : What other specific tasks did you perform on these private instance
 Answer:
 I used SSM to run scripts for software updates and to collect system logs for troubleshooting. This was done through the Run Command feature in SSM, which allowed me to execute commands on multiple instances simultaneously without needing direct SSH access. Also in my current project I have implemented enhanced monitoring for disk space , Detailed Transaction tracing and in depth log analysis.
 
-Question 4 :
+Question 4 : what is the Docker's feature that helps you ensure that one application does not consume all the server's resources?
+Answer:
+Docker's cgroups feature helps you by limiting how much CPU, memory, and other resources each application can use. This means you can set rules so one application cannot take up all the resources, making sure other applications still have enough to run properly.
+
+Question 5 : okay , but How does Docker's use of ensure that each application has its own isolated environment?
+Answer:
+Docker's namespaces feature ensures that each application runs in its own separate space. This means that the files, network settings, and processes of one application are hidden from others. It keeps everything isolated, so changes in one application won't affect any other applications.
