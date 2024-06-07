@@ -1,0 +1,10 @@
+Question 1. 
+Interviewer: How would you securely enable communication between three Kubernetes clusters without using external DNS?
+Answer: 
+To securely enable communication between three Kubernetes clusters without relying on external DNS, I would implement a service mesh such as Istio. Service mesh provide robust features for managing secure communication between services across clusters, including encryption and authentication. Additionally, I would configure network policies within each cluster to control traffic, ensuring that only authorized pods can communicate. While NodePort and ClusterIP are also options for communication within Kubernetes clusters, they may not provide the same level of security and flexibility as a service mesh like Istio
+
+Question 2. 
+Interviewer:
+Can you elaborate on how you would manage the certificates and authentication between the clusters?
+Answer:
+For managing certificates and authentication, I would use a centralized certificate authority (CA) to issue and manage the certificates, utilizing tools like cert-manager to automate this process. This ensures all clusters trust the same CA. For authentication and authorization, I would implement Role-Based Access Control (RBAC) policies to define permissions for different services and users.
